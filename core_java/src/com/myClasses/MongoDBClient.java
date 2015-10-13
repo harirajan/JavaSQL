@@ -1,4 +1,4 @@
-package com.myClasses;
+/*package com.myClasses;
 
 import java.net.UnknownHostException;
 import java.text.DecimalFormat;
@@ -18,7 +18,7 @@ public class MongoDBClient {
 			NumberFormat amountFormat = new DecimalFormat(FEE_AMT_FORMAT);
 			System.out.println(amountFormat.format(removeDecimal(Float.toString(test))));
 			
-			/*Mongo mongo = new Mongo("localhost", 27017);
+			Mongo mongo = new Mongo("localhost", 27017);
 			DB db = mongo.getDB("test");
 			DBCollection collection = db.getCollection("employees");
 			BasicDBObject employee = new BasicDBObject();
@@ -31,12 +31,12 @@ public class MongoDBClient {
 			while (cursor.hasNext()) {
 				System.out.println(cursor.next());
 			}
-			System.out.println("The Search Query has Executed!");*/
-		/*} catch (UnknownHostException e) {
+			System.out.println("The Search Query has Executed!");
+		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		} catch (MongoException e) {
 			e.printStackTrace();
-		}*/
+		}
 	}
 	
 	private static long removeDecimal(String amount) {
@@ -51,3 +51,4 @@ public class MongoDBClient {
 		return Long.valueOf(amount).longValue();
 	}
 }
+*/
