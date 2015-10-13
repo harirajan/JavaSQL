@@ -1,9 +1,14 @@
-/*package com.myClasses;
+package com.myClasses;
 
 import java.net.UnknownHostException;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
+import com.mongodb.Mongo;
 import com.mongodb.MongoException;
 
 public class MongoDBClient {
@@ -34,11 +39,11 @@ public class MongoDBClient {
 			System.out.println("The Search Query has Executed!");
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
-		} catch (MongoException e) {
-			e.printStackTrace();
+		} catch (MongoException e1) {
+			e1.printStackTrace();
 		}
 	}
-	
+}
 	private static long removeDecimal(String amount) {
 		if (amount != null) {
 			String[] amounts = amount.split("\\.");
@@ -51,4 +56,3 @@ public class MongoDBClient {
 		return Long.valueOf(amount).longValue();
 	}
 }
-*/
