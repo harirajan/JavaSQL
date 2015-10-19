@@ -23,7 +23,13 @@ public class MongoDBClient {
 			NumberFormat amountFormat = new DecimalFormat(FEE_AMT_FORMAT);
 			System.out.println(amountFormat.format(removeDecimal(Float.toString(test))));
 			
-			Mongo mongo = new Mongo("localhost", 27017);
+			Mongo mongo = null;
+			try {
+				mongo = new Mongo("localhost", 27017);
+			} catch (UnknownHostException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			DB db = mongo.getDB("test");
 			DBCollection collection = db.getCollection("employees");
 			BasicDBObject employee = new BasicDBObject();
@@ -37,13 +43,13 @@ public class MongoDBClient {
 				System.out.println(cursor.next());
 			}
 			System.out.println("The Search Query has Executed!");
-		} catch (UnknownHostException e) {
+		} /*catch (UnknownHostException e) {
 			e.printStackTrace();
 		} catch (MongoException e1) {
 			e1.printStackTrace();
-		}
-	}
-}
+		}*/
+	//}
+	
 	private static long removeDecimal(String amount) {
 		if (amount != null) {
 			String[] amounts = amount.split("\\.");
