@@ -8,6 +8,7 @@ import java.util.GregorianCalendar;
 
 public class DateTestProgram {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) throws ParseException {
 		
 		//Date Formats
