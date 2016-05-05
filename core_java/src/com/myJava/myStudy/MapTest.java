@@ -15,6 +15,9 @@ public class MapTest {
 		Map<String, String> hMap = new HashMap<String, String>();
 		Map<String, String> hTable = new Hashtable<String, String>();
 		hMap.put(null, null);
+		hMap.put(null, "abc");
+		
+		System.out.println(hMap.get(null));
 		// hTable.put(null,null); //hashTable does not allow null keys or null values. Runtime Exception
 		System.out.println(hMap.put("a", "one"));
 		System.out.println(hMap.put("a", "b"));
